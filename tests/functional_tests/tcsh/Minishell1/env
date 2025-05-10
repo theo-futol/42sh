@@ -1,0 +1,1 @@
+setenv USER Ploof; env | grep USER=Ploof; unsetenv USER;  env | grep USER

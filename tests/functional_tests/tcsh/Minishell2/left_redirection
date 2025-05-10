@@ -1,0 +1,1 @@
+echo This is a test file > input.txt; cat < input.txt; rm input.txt

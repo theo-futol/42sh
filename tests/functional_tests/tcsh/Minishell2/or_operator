@@ -1,0 +1,1 @@
+ls || echo 1818; ls | rev || echo 5H311;

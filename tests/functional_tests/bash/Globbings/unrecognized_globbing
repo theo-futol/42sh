@@ -1,0 +1,1 @@
+echo *.y; echo aurelien[1-10].txt; echo ? ; echo ohio{1..5..2}

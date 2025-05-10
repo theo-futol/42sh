@@ -1,0 +1,1 @@
+echo Hello, World! > output.txt; echo Hello again! >> output.txt; cat output.txt; rm output.txt

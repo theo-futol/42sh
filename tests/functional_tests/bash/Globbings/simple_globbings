@@ -1,0 +1,2 @@
+echo *.c; echo te?ts; echo t???s; ls ?; echo main*; echo t*; echo *sts; echo t**s; echo t?sts/*;
+echo */* | grep main

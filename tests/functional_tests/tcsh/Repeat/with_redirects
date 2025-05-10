@@ -1,0 +1,3 @@
+repeat 3 echo I live at $HOME >> babadiboo.txt
+cat babadiboo.txt
+repeat 2 rm babadiboo.txt

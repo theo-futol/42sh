@@ -1,0 +1,3 @@
+ls -fjgehidixwdfs ; echo $?
+ls -ezjkfjzlsier ; ls $?
+echo $?

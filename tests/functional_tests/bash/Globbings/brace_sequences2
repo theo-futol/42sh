@@ -1,0 +1,1 @@
+echo {a..z}; echo file{f..j}.txt; echo file{a..z..2}.txt; echo file{s,32,q}

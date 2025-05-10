@@ -1,0 +1,4 @@
+alias ll "ls -l"
+ll ; ll;ll ; ll tests; 
+unalias ll;
+ll;

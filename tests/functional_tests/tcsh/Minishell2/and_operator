@@ -1,0 +1,1 @@
+echo 1818 > localtime && cat localtime | rev && rm localtime && ls localtime

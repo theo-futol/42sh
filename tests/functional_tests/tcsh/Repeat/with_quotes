@@ -1,0 +1,4 @@
+repeat 2 echo "A string with spaces"
+repeat 2 echo 'Single quoted string'
+repeat 2 echo "Quoted and $USER"
+

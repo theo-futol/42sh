@@ -1,0 +1,5 @@
+repeat 3 echo 'hello'
+repeat 1 echo "one time only"
+repeat 0 echo "should not appear"
+repeat -1 echo negative
+
