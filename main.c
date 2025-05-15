@@ -61,6 +61,7 @@ void minishell_tty(llist_t *env_vars)
 
 int main(int ac, char **av UNUSED, char **env)
 {
+    int my_exit = 0;
     shell_t *sh = shell();
 
     if (!sh)
@@ -73,10 +74,11 @@ int main(int ac, char **av UNUSED, char **env)
         minishell(shell()->env);
     } else
         minishell_tty(shell()->env);
+    my_exit = last_result(false, 0);
     freef("l:f l:f l:f f", &sh->env, &sh->local_env,
         &sh->aliases, history_path());
     free(sh);
     if (isatty(0))
         fflush(stdout);
-    exit(last_result(false, 0));
+    exit(my_exit);
 }
