@@ -23,7 +23,7 @@ int get_prompt(char **line, llist_t *env)
         }
         if (!(*line) || buff_size > INT_MAX)
             return 0;
-        get_input(ch, line, &count, &cursor_pos);
+        get_input(ch, *line, &count, &cursor_pos);
     }
     (*line)[count] = 0;
     add_buf_scroll(&shell()->win, 0, count != 0 ? 1 : 0, *line);

@@ -1,4 +1,5 @@
 which ls
-which cd
+which echo
+which 42sh
 which tcsh
 which ls  tree

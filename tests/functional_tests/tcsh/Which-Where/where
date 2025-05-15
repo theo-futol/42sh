@@ -1,4 +1,5 @@
 where ls
 where tree
+where 42sh
 where tcsh
 where ls  tree

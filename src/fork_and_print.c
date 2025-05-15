@@ -45,7 +45,7 @@ static void error_execve(char *command)
     if (errno == ENOEXEC)
         dprintf(2, ". Binary file not executable");
     dprintf(2, ".\n");
-    exit(1);
+    exit(84);
 }
 
 void my_paths_exec(char **command, llist_t *env_vars, char *filepath)
@@ -77,7 +77,7 @@ int parent_wait(pid_t cpid)
     do {
         wpid = waitpid(cpid, &wstatus, WUNTRACED | WCONTINUED);
         if (wpid == -1)
-            exit(1);
+            exit(84);
         if (WIFEXITED(wstatus))
             continue;
         if (WIFSIGNALED(wstatus))
@@ -110,7 +110,7 @@ int fork_and_print(char **command, llist_t *env_vars)
         return 1;
     cpid = fork();
     if (cpid < 0)
-        return free(filepath), 1;
+        return free(filepath), 84;
     if (cpid == 0)
         my_paths_exec(command, env_vars, filepath);
     else

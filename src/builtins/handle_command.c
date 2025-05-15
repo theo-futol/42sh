@@ -23,16 +23,9 @@ const builtin_t builtins[] = {
     {"which", &my_which},
     {"where", &my_where},
     {"repeat", &my_repeat},
+    {"nautilus", &nautilus},
     {0}
 };
-
-int is_builtin(char *str)
-{
-    for (int i = 0; builtins[i].command; i++)
-        if (my_strcmp(str, builtins[i].command_name) == 0)
-            return 1;
-    return 0;
-}
 
 int handle_command(char *command, llist_t **env_vars)
 {

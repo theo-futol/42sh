@@ -24,6 +24,7 @@
     #include <sys/ioctl.h>
     #include <locale.h>
     #include <pthread.h>
+    #include <arpa/inet.h>
 
     #include <dirent.h>
     #include <glob.h>
@@ -89,7 +90,6 @@ char *search_env_var(llist_t *env_vars, char *var);
 
 
 /*                     Builtins                     */
-int is_builtin(char *str);
 int my_cd(int ac, char **av, llist_t **env_vars);
 int my_env(int ac, char **av, llist_t **env_vars);
 int my_unsetenv(int ac, char **av, llist_t **env_vars);
@@ -141,4 +141,7 @@ int init_screen(void);
 /*                  Globbings                       */
 llist_t *generate_sequences(char *origin);
 llist_t *generate_pattern_match(char *origin);
+
+/* Nautilus */
+int nautilus(int ac, char **av, llist_t **env_vars);
 #endif

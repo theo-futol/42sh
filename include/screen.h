@@ -8,7 +8,7 @@
 #ifndef INCLUDED_NCURSES_H
     #define INCLUDED_NCURSES_H
     #include <ncurses.h>
-    #define SCROLL_MAX 100
+    #define SCROLL_MAX 30
 
 typedef struct screen_s {
     WINDOW *screen;
@@ -23,20 +23,19 @@ typedef struct screen_s {
 typedef struct input_s {
     int key;
     int (*fct)();
-    bool disp_buf;
+    // booléen ???
 } input_t;
 
 //      LINE EDITING        //
 extern const input_t inputs[];
 
-int handle_input_left(char **line, int *count, int *cursor_pos);
-int handle_input_right(char **line, int *count, int *cursor_pos);
-int handle_input_del(char **line, int *count, int *cursor_pos);
-int handle_input_up(char **line, int *count, int *cursor_pos);
-int handle_input_down(char **line, int *count, int *cursor_pos);
-int handle_input_mouse(char **line, int *count);
-int handle_tab(char **line, int *count, int *cursor_pos);
-int get_input(int key, char **line, int *count, int *cursor_pos);
+int handle_input_left(char *line, int *count, int *cursor_pos);
+int handle_input_right(char *line, int *count, int *cursor_pos);
+int handle_input_del(char *line, int *count, int *cursor_pos);
+int handle_input_up(char *line, int *count);
+int handle_input_down(char *line, int *count);
+int handle_input_mouse(char *line, int *count);
+int get_input(int key, char *line, int *count, int *cursor_pos);
 int get_prompt(char **line, llist_t *env);
 void disp_buf_scroll(screen_t *win);
 int add_buf_scroll(screen_t *win, int new_line, int nb, ...);
